@@ -69,31 +69,47 @@
     }
 
     /* HERO */
-    .hero{
-      min-height:100vh;
-      min-height:100dvh;
-      display:flex;
-      align-items:center;
-      position:relative;
-      overflow:hidden;
-      background:
-        linear-gradient(90deg, rgba(8,8,8,.94) 0%, rgba(8,8,8,.82) 40%, rgba(8,8,8,.45) 100%),
-        url('https://images.unsplash.com/photo-1795075127646-3efe423e6ecb?q=80&w=1030&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D') center center / cover no-repeat;
-    }
+    /* HERO */
+.hero{
+  min-height:100vh;
+  min-height:100dvh;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background-color:#080808;
+}
 
-    .hero::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:radial-gradient(circle at 20% 30%, rgba(184,151,90,.08), transparent 35%);
-      pointer-events:none;
-    }
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8,8,8,.95) 0%,
+      rgba(8,8,8,.75) 40%,
+      rgba(8,8,8,.25) 100%
+    ),
+    url('https://images.unsplash.com/photo-1795075127646-3efe423e6ecb?q=80&w=1030&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D');
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
 
-    .hero-content{
-      position:relative;
-      z-index:2;
-      padding:7rem 0 5rem;
-    }
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at 20% 30%, rgba(184,151,90,.08), transparent 35%);
+  pointer-events:none;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding:7rem 0 5rem;
+}
 
     .eyebrow{
       color:var(--gold);
@@ -285,12 +301,20 @@
 
     /* MOBILE */
     @media (max-width: 991px){
-      .hero{
-        text-align:center;
-        background:
-          linear-gradient(180deg, rgba(8,8,8,.84) 0%, rgba(8,8,8,.9) 100%),
-          url('https://images.unsplash.com/photo-1795075127646-3efe423e6ecb?q=80&w=1030&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D') center center / cover no-repeat;
-      }
+  .hero{
+    text-align:center;
+  }
+
+  .hero p.lead{
+    margin-inline:auto;
+  }
+}{
+  .hero{
+     text-align:center;
+      background:
+       linear-gradient(180deg, rgba(8,8,8,.84) 0%, rgba(8,8,8,.9) 100%),
+        url('https://images.unsplash.com/photo-1795075127646-3efe423e6ecb?q=80&w=1030&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D') center center / cover no-repeat;
+       }
 
       .hero p.lead{
         margin-inline:auto;
@@ -370,14 +394,19 @@
             </p>
 
             <!-- HERO BUTTONS -->
-            <div class="mt-4">
-              <a href="#" class="btn btn-gold me-2">Leave a Review</a>
-              <a href="#" class="btn btn-outline-gold">Join Our Broadcast</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="mt-4">
+  <a href="https://g.page/r/CWzllvk0OEnrEBM/review"
+     class="btn btn-gold me-2"
+     target="_blank">
+    Leave a Review
+  </a>
+
+  <a href="https://whatsapp.com/channel/0029VbDsWhiE50UphId05H0h"
+     class="btn btn-outline-gold"
+     target="_blank">
+    Join Our Broadcast
+  </a>
+</div>
 
     <!-- ABOUT -->
     <section class="section-surface" id="about">
@@ -435,6 +464,8 @@
         </div>
 
         <div class="row g-4">
+          <div class="col-6 col-md-4 col-lg-3"><div class="lux-card text-center"><div class="lux-label">Police</div></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="lux-card text-center"><div class="lux-label">Tornado</div></div></div>
           <div class="col-6 col-md-4 col-lg-3"><div class="lux-card text-center"><div class="lux-label">Casio</div></div></div>
           <div class="col-6 col-md-4 col-lg-3"><div class="lux-card text-center"><div class="lux-label">Gshock</div></div></div>
           <div class="col-6 col-md-4 col-lg-3"><div class="lux-card text-center"><div class="lux-label">Edifice</div></div></div>
@@ -457,7 +488,7 @@
         </div>
 
         <div class="row g-3">
-          <div class="col-6 col-md-4 col-lg-2"><a class="social-box" href="https://instagram.com/timeworld_dip" target="_blank"><div class="social-icon">IG</div><div>Instagram</div></a></div>
+          <div class="col-6 col-md-4 col-lg-2"><a class="social-box" href="https://instagram.com/timeworld_fakhruddinmall" target="_blank"><div class="social-icon">IG</div><div>Instagram</div></a></div>
           <div class="col-6 col-md-4 col-lg-2"><a class="social-box" href="https://facebook.com/timeworld.ae" target="_blank"><div class="social-icon">FB</div><div>Facebook</div></a></div>
           <div class="col-6 col-md-4 col-lg-2"><a class="social-box" href="https://tiktok.com/@timeworld.llc" target="_blank"><div class="social-icon">TT</div><div>TikTok</div></a></div>
           <div class="col-6 col-md-4 col-lg-2"><a class="social-box" href="https://wa.me/971525048397" target="_blank"><div class="social-icon">WA</div><div>WhatsApp</div></a></div>
@@ -483,7 +514,9 @@
         <div class="contact-card">
           <div id="hubspotFormWrapper">
             <script src="https://js-eu1.hsforms.net/forms/embed/148195137.js" defer></script>
-<div class="hs-form-frame" data-region="eu1" data-form-id="8c38c765-a374-41bc-ab7e-1a8a4a7333b8" data-portal-id="148195137"></div>
+<div class="hs-form-frame" data-region="eu1" data-form-id="b8f7a7b9-5f7c-4a85-9766-ed0b439f2108" data-portal-id="148195137"></div>
+            </div>
+          </div>
 
           <p class="text-center mt-3 mb-0" style="color:var(--muted);font-size:.85rem;">
             🔒 Your details are private and never shared with anyone.
@@ -521,4 +554,3 @@
   </script>
 </body>
 </html>
-
